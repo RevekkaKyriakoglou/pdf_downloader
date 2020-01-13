@@ -11,8 +11,8 @@ class PdfspiderSpider(scrapy.Spider):
 
     def parse(self, response):
         for href_in_page in response.xpath("//a[contains(@href,'.pdf')]"):
-            loader = ItemLoader(item=PdfDownloaderItem, selector=href_in_page)
-            relative_url = href_in_page.xpath("./@href").extract_first()
+            loader = ItemLoader(item=PdfDownloaderItem(), selector=href_in_page)
+            relative_url = href_in_page.xpath(".//@href").extract_first()
             absolute_url = response.urljoin(relative_url)
             loader.add_value('file_urls', absolute_url)
             loader.add_xpath('pdf_name', './text()')

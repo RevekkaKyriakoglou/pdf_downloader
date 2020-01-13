@@ -14,7 +14,7 @@ class PdfDownloaderItem(scrapy.Item):
     # name = scrapy.Field()
     file_urls = scrapy.Field()
     files = scrapy.Field()
-    #pdf_name = scrapy.Field(
-    #    output_processor = TakeFirst()
-    #)
+    pdf_name = scrapy.Field(
+        output_processor = TakeFirst()
+    )
 

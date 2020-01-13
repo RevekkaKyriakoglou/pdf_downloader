@@ -70,7 +70,7 @@ ITEM_PIPELINES = {
 
 FILES_STORE = '/home/igm/projects/pdf_downloader'
 
-DOWNLOAD_TIMEOUT = 2400
+DOWNLOAD_TIMEOUT = 1200
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
