@@ -16,7 +16,4 @@ class PdfspiderSpider(scrapy.Spider):
             absolute_url = response.urljoin(relative_url)
             loader.add_value('file_urls', absolute_url)
             loader.add_xpath('pdf_name', './text()')
-            print('%%%%%%%%%%%%%%%%%%%%%%%%%%%')
-            print(absolute_url)
-            print('%%%%%%%%%%%%%%%%%%%%%%%%%%%')
             yield loader.load_item()
